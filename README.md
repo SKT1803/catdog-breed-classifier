@@ -35,6 +35,18 @@ Fine-tuning a vision model to classify cat and dog breeds using FastAI’s DataB
 
 ---
 
+## Tech Stack
+
+- **Language & Frameworks**: Python 3.10+ · PyTorch · FastAI
+
+- **Vision & Models**: ResNet34 → ResNet50 (via FastAI/timm), ImageNet pretraining, mixed precision (`to_fp16`)
+
+- **Data Pipeline**: FastAI DataBlock, `RegexLabeller`, on-the-fly augmentations (`aug_transforms`)
+
+- **Evaluation**: accuracy metric, confusion matrix, top losses, saved plots (`loss_curve.png`, `top_losses.png`)
+  
+---
+
 ## Outputs & Artifacts
 
 - `models/model_weights.pth`, raw trained weights (via `learn.save`)
